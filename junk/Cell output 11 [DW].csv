@@ -1,0 +1,23 @@
+customer_id,churn_probability_percent,risk_category,plan_type,monthly_cost,top_feature_attributions,comprehensive_problem_description,recommended_solution,retention_email
+C00004244,64.6,HIGH RISK,Limited_2GB,30,"[{'feature': 'household_income', 'attribution': -0.33624252676963806}
+ {'feature': 'age', 'attribution': 0.12005558609962463}
+ {'feature': 'data_overage_frequency', 'attribution': 0.10666532814502716}
+ {'feature': 'family_plan_flag', 'attribution': -0.0872725397348404}
+ {'feature': 'monthly_cost', 'attribution': -0.04487797990441322}]","Customer is facing significant **financial strain** and **service dissatisfaction**. Their current 2GB mobile plan is **grossly inadequate** for a 16-year-old's typical data consumption, leading to **four frequent data overages monthly**. These constant overages result in **unpredictable and excessive costs**, making their $30/month plan far more expensive than advertised and offering **poor value for money**. This consistent pattern of running out of data and incurring surcharges causes **significant frustration** and **disrupted service access**, driving a high churn risk. The core pain points are insufficient data allowance, high unexpected costs due to overages, and poor perceived value.",Upgrade to Unlimited_Standard plan at $69/month eliminating all overage fees and saving $35/month. Bundle with home internet 100Mbps for additional $40/month providing seamless work-from-home connectivity. Offer 3 months of new plan at 50% discount and waive all previous overage charges as goodwill gesture.,"Dear Valued Customer,
+
+We are writing to you today because we understand you may be experiencing significant frustration with your current mobile service, and we want to ensure you receive the best possible value and experience with TriLink. We recognize that your current Limited_2GB plan, while initially affordable at $30 per month, has likely become unpredictable and costly due to frequent data overages, making it less suitable for typical usage, especially for a 16-year-old. The constant need to manage data, coupled with unexpected charges, can lead to significant financial strain and service disruptions.
+
+At TriLink, our priority is your satisfaction and ensuring you have reliable, high-value services that meet your needs without hidden costs. To address these concerns directly, we would like to offer you a comprehensive solution designed to eliminate overage fees, provide predictable monthly costs, and significantly enhance your overall connectivity.
+
+We recommend upgrading to our Unlimited_Standard plan for $69 per month. This plan provides truly unlimited data, eliminating all overage charges, which we estimate could potentially save you up to $35 each month compared to your current average expenditure, providing stable and predictable costs. You'll never have to worry about running out of data or incurring unexpected fees again.
+
+To further enhance your connectivity and value, we also offer the option to bundle this with our high-speed 100Mbps home internet service for an additional $40 per month. This powerful combination will provide seamless connectivity for your entire household, supporting everything from remote learning and work to entertainment and browsing.
+
+To make this transition as smooth as possible and demonstrate our commitment to your satisfaction, we are pleased to offer you the first three months of your new Unlimited_Standard plan at a 50% discount. Furthermore, as a goodwill gesture and to alleviate any past financial burden, we will waive all previous overage charges on your account.
+
+We are confident that this upgraded plan and the bundled services will not only meet but exceed your mobile and internet needs, offering unparalleled value and peace of mind.
+
+Please contact us at your earliest convenience to discuss this personalized offer further. We are here to help you get the most out of your services with TriLink.
+
+Thank you,
+TriLink Ltd."

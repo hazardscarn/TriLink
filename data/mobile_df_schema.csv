@@ -1,0 +1,15 @@
+column_name,data_type,is_nullable,column_default
+service_id,STRING,YES,NULL
+customer_id,STRING,YES,NULL
+plan_type,STRING,YES,NULL
+line_count,INT64,YES,NULL
+monthly_cost,INT64,YES,NULL
+data_overage_frequency,INT64,YES,NULL
+start_date,DATETIME,YES,NULL
+end_date,DATETIME,YES,NULL
+contract_type,STRING,YES,NULL
+contract_end_date,DATETIME,YES,NULL
+family_plan_flag,BOOL,YES,NULL
+device_upgrade_cycle,INT64,YES,NULL
+mobile_churn,INT64,YES,NULL
+mobile_tenure_days,FLOAT64,YES,NULL

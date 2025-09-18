@@ -1,0 +1,6 @@
+predicted_mobile_churn,probability,top_feature_attributions,baseline_prediction_value,prediction_value,approximation_error,customer_id,age,household_income,family_size,home_ownership,work_from_home_flag,education_level,life_stage,home_square_footage,property_value,neighborhood_crime_rate,neighborhood_income_median,fiber_availability,income_bracket,service_id,plan_type,line_count,monthly_cost,data_overage_frequency,contract_type,family_plan_flag,device_upgrade_cycle,mobile_tenure_days,mobile_churn,income_per_person,cost_per_line,tenure_years
+0,0.6457322835922241,"[{'feature': 'household_income', 'attribution': -0.33624252676963806}
+ {'feature': 'age', 'attribution': 0.12005558609962463}
+ {'feature': 'data_overage_frequency', 'attribution': 0.10666532814502716}
+ {'feature': 'family_plan_flag', 'attribution': -0.0872725397348404}
+ {'feature': 'monthly_cost', 'attribution': -0.04487797990441322}]",1.0909984111785889,0.8001659971014305,0.0,C00004244,16,50000,1,Rent,False,Graduate,Single,610,92586,7.7,35512,True,Low,MOB_00003198,Limited_2GB,1,30,4,Month_to_Month,False,36,449.0,0,50000.0,30.0,1.23
