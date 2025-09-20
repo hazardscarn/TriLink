@@ -1,0 +1,24 @@
+numpy==2.3.2
+pandas==2.3.2
+faker==37.6.0
+google-cloud-bigquery>=3.36.0
+pyarrow==21.0.0
+google-cloud-bigquery-storage==2.33.0
+tqdm>=4.67.1
+ipywidgets
+bigquery-magics>=0.10.3
+python-dotenv>=1.1.1
+google.generativeai
+
+##Google ADK
+google-cloud-aiplatform[adk,agent_engines]>=1.96.0
+vertexai>=1.35.0
+google-adk>=1.3.0
+google-cloud==0.34.0
+google-cloud-storage>=2.19.0
+google-cloud-secret-manager>=2.24.0
+google-cloud-speech>=2.33.0
+google-cloud-texttospeech>=2.27.0
+# Web framework (for FastAPI components in ADK)
+fastapi>=0.100.0
+uvicorn>=0.22.0
