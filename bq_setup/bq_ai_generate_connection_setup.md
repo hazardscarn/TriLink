@@ -1,6 +1,5 @@
 # BigQuery AI.GENERATE Connection Setup - Complete Guide
 
-The error you're seeing indicates that the BigQuery connection's service account doesn't have proper permissions. Here's a complete step-by-step fix:
 
 ## **Step 1: Verify APIs are Enabled**
 

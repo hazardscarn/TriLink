@@ -1,3 +1,11 @@
+import os
+from dotenv import load_dotenv
+load_dotenv()
+project_id=os.environ.get("project_id")
+dataset_id=os.environ.get("database_name")
+
+
+
 class QueryStore:
     """
     Module for generating BigQuery AI-powered retention scripts for mobile customers.
@@ -375,7 +383,7 @@ LEFT JOIN customer_problems cp ON cc.customer_id = cp.customer_id
           income_bracket,
           neighborhood_crime_rate,
           work_from_home_flag
-        FROM `trilink-472019.database.customer_df`
+        FROM `{self.project_id}.{self.dataset_id}.customer_df`
         WHERE customer_id = '{customer_id}'
       ),
 
@@ -385,7 +393,7 @@ LEFT JOIN customer_problems cp ON cc.customer_id = cp.customer_id
           customer_id,
           STRING_AGG(device_type, ', ' ORDER BY device_type) AS device_types_concat,
           COUNT(device_type) AS total_security_devices
-        FROM `trilink-472019.database.security_df`
+        FROM `{self.project_id}.{self.dataset_id}.security_df`
         WHERE customer_id = '{customer_id}'
         GROUP BY customer_id
       ),
@@ -398,7 +406,7 @@ LEFT JOIN customer_problems cp ON cc.customer_id = cp.customer_id
           plan_tier AS internet_plan,
           contract_type AS internet_contract_type,
           internet_tenure_days
-        FROM `trilink-472019.database.internet_df`
+        FROM `{self.project_id}.{self.dataset_id}.internet_df`
         WHERE customer_id = '{customer_id}'
           AND internet_churn = 0
       ),
@@ -412,7 +420,7 @@ LEFT JOIN customer_problems cp ON cc.customer_id = cp.customer_id
           data_overage_frequency AS current_mobile_data_overage,
           monthly_cost AS current_mobile_cost,
           mobile_tenure_days
-        FROM `trilink-472019.database.mobile_df`
+        FROM `{self.project_id}.{self.dataset_id}.mobile_df`
         WHERE customer_id = '{customer_id}'
           AND mobile_churn = 0
       ),
@@ -534,12 +542,12 @@ LEFT JOIN customer_problems cp ON cc.customer_id = cp.customer_id
           vs.base.sector AS sector,
           vs.distance
         FROM VECTOR_SEARCH(
-          TABLE `trilink-472019.database.business_solution_embeddings`,
+          TABLE `{self.project_id}.{self.dataset_id}.business_solution_embeddings`,
           'problem_embedding',
           (
             SELECT ml_generate_embedding_result AS query_embedding
             FROM ML.GENERATE_EMBEDDING(
-              MODEL `trilink-472019.database.text_embedding_005_model`,
+              MODEL `{self.project_id}.{self.dataset_id}.text_embedding_005_model`,
               (SELECT '{problem_description}' AS content)
             )
           ),
@@ -557,6 +565,67 @@ LEFT JOIN customer_problems cp ON cc.customer_id = cp.customer_id
       """
       return query
     
+    
+    def get_diy_solution(self, customer_id):
+        """
+        Collect the DIY solution generated for the customer and walk them trhough it.
+        """
+        query = f"""
+select a.issue_description,a.device_name,a.hardware_or_software,a.urgency,a.diy_instructions,
+case when a.need_on_site_visit=True then 'Technnician will visit site soon' else 'We will troubleshoot this on phone now' end as resolution_mode
+from `{self.project_id}.{self.dataset_id}.active_customer_tickets_solutions` a 
+inner join `{self.project_id}.{self.dataset_id}.active_customer_tickets` b
+on a.ticket_id=b.ticket_id
+and b.customer_id='{customer_id}'
+;
+
+        """
+        return query
+    
+
+    def get_tech_reports(self, tech_id,city):
+        """
+        Returns all the active tickets assigned to technician in the city with reports and issue added in.
+        """
+        query = f"""
+select a.ticket_id,a.device_name,a.hardware_or_software,a.urgency,a.issue_description,a.technician_report,b.city,b.postal_code from `{self.project_id}.{self.dataset_id}.active_customer_tickets_mm` b 
+inner join `{self.project_id}.{self.dataset_id}.active_customer_tickets_solutions` a
+on a.ticket_id=b.ticket_id
+where lower(b.city)='{city}' and b.technician_id='{tech_id}' and a.need_on_site_visit=True;
+        """
+        return query
+
+    def get_tech_solution(self, question):
+        """
+        Returns the most similar tech issues and solution to them from vector storage to passed pronlem.
+        """
+        query = f"""
+  SELECT 
+    vs.base.problem_summary AS matched_problem,
+    vs.base.solution_steps AS recommended_solution,
+    vs.base.technician_notes AS technician_notes,
+    vs.distance
+  FROM VECTOR_SEARCH(
+    TABLE `{self.project_id}.{self.dataset_id}.device_problem_solution_embeddings`,
+    'problem_embedding',
+    (
+      SELECT ml_generate_embedding_result AS query_embedding
+      FROM ML.GENERATE_EMBEDDING(
+        MODEL `{self.project_id}.{self.dataset_id}.text_embedding_005_model`,
+        (SELECT {question} AS content)
+      )
+    ),
+    top_k => 5,
+    distance_type => 'COSINE'
+  ) AS vs
+  where vs.distance<=0.3
+  ORDER BY vs.distance ASC;
+
+        """
+        return query
+
+
+
 
     def get_churn_score_mobile_query(self, customer_id):
         """
