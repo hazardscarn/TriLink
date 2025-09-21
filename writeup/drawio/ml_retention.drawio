@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.3">
+  <diagram name="Page-1" id="bMpS56SYtDnE63oqlAGY">
+    <mxGraphModel dx="1668" dy="925" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-1" target="YqnrHok4tqcxLZUBB8qF-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Mobile Customer View&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(&lt;i&gt;Filter to subset of interest&lt;/i&gt;)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="285" y="117" width="214" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-2" target="YqnrHok4tqcxLZUBB8qF-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Score the XGBOOST Churn Model using &lt;b&gt;ML.PREDICT_EXPLAIN&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Filter to customers with high churn probability to Target&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Extract feature contributions towards churn for all custtomers&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="171" y="231" width="443" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-4" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Action 3 :&amp;nbsp;ML-Powered Personalized Retention Emails&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="19" y="9" width="816" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-6" value="Embedding Model Used :&amp;nbsp;text-embedding-005 from Vertex AI in BigQuery" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="415" y="59" width="408" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-7" value="LLM Used : Gemini 2.5 Flash with Vertex AI connection in BigQuery&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="19" y="59" width="380" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="192" y="511" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-8" target="YqnrHok4tqcxLZUBB8qF-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="619" y="417" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.459;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-8" target="YqnrHok4tqcxLZUBB8qF-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="392" y="633" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;For each customer, using the top feature contribution for churn from ML prediction and AI.GENERATE, convert technical risk factors into comprehensive customer problem statement&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="370" width="284" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="338" y="637" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-11" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Vector Search of&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;customer problem statement&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&amp;nbsp;to business problem -solution database to retrieve potential business solutions for customers problem&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="85" y="512" width="231" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="436" y="636" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-13" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Consolidated customer data across all services (Mobile, Internet, Home Security) to collect current availing services vs upsell/cross sell options&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="503.5" y="512" width="231" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="YqnrHok4tqcxLZUBB8qF-16" target="YqnrHok4tqcxLZUBB8qF-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-16" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Create Personalized Retention Email addressing customers reason for churn detected by ML model, best solution available from business solution vector search, consolidated customer service info etc. with AI.GENERATE&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="256" y="638" width="296" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="YqnrHok4tqcxLZUBB8qF-24" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Save the personalized retention email table for all customer of interest to a table. Connect to marketing tool and send the personalized retention mail for customer saves&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="281" y="790" width="247" height="97" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
