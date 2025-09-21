@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.3">
+  <diagram name="Page-1" id="jaQaUqzCBUkcWZA2u-jZ">
+    <mxGraphModel dx="1668" dy="925" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-2" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Action 2 :&amp;nbsp;Agent Performance Evaluation&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="13" y="19" width="816" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-3" value="LLM Used : Gemini 2.5 Flash with Vertex AI connection in BigQuery&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="17" y="77" width="380" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-4" value="Embedding Model Used :&amp;nbsp;text-embedding-005 from Vertex AI in BigQuery" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="421" y="77" width="408" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-5" target="3USK6TcrbG5OVVWdUlxQ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-5" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Call Transcripts of agents filtered as of date period (&lt;i&gt;September 14-20&lt;/i&gt;)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="295" y="131" width="196" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-6" target="3USK6TcrbG5OVVWdUlxQ-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="393" y="339" />
+              <mxPoint x="254" y="339" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-6" target="3USK6TcrbG5OVVWdUlxQ-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="393" y="340" />
+              <mxPoint x="522" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-6" target="3USK6TcrbG5OVVWdUlxQ-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="393" y="524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Generate Embeddings for all the call transcripts&amp;nbsp;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="294" y="257" width="198" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-8" target="3USK6TcrbG5OVVWdUlxQ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-8" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Vector Search for 3 Similar Calls in the past among all agent with high rating if it exists with high similarity and the highest Rating&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="145" y="374" width="227" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-10" target="3USK6TcrbG5OVVWdUlxQ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-10" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Vector Search of top call to business problem -solution database to retrieve potential business solutions for customer problem&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="421" y="374" width="217" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-14" target="3USK6TcrbG5OVVWdUlxQ-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-14" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;For each call, for each Agent using AI.GENERATE create 3&amp;nbsp; columns :-&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- What Agent did well (positives)&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- What Agent could have done better (negatives)&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Improvements agent could make for the call&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="241" y="508" width="303" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3USK6TcrbG5OVVWdUlxQ-17" target="3USK6TcrbG5OVVWdUlxQ-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-17" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;For each Agent using AI.GENERATE generate the weekly positives, weekly negatives, coaching recommendations by aggregating the individual call positives, negatives and improvements identified from each call&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="244" y="660" width="296" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="3USK6TcrbG5OVVWdUlxQ-19" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Save the weekly report to a table.&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Supervisor can access agent performance from this table for the week and share the appreciation for positives while passing through the personalized coaching improvement for each agent&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="244" y="808" width="296" height="127" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
