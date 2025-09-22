@@ -1,6 +1,6 @@
-# TriLink - AI-Powered Telecom Customer Service Analytics
+# TriLink - BigQuery AI Powered Enterprise Analytics
 
-TriLink is an innovative AI-powered customer service analytics platform that combines telecom services (mobile, internet) with home security solutions. The project demonstrates how BigQuery's multimodal AI capabilities can analyze customer interactions, predict churn, and generate intelligent cross-selling recommendations for a hybrid telecom + home security company.
+TriLink is an innovative AI-powered analytics platform that combines telecom services (mobile, internet) with home security solutions. The project demonstrates how BigQuery's multimodal AI capabilities can analyze customer interactions, predict churn, and generate intelligent cross-selling recommendations for a hybrid telecom + home security company.
 
 ## 🌟 What TriLink Does
 
